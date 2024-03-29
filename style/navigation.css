@@ -1,0 +1,32 @@
+ul.nav1 {
+	float:right;
+	font-size: 20px;
+	color:black;
+}
+.nav1 li{
+	display: inline-block;
+	margin: 0px;
+	padding: 4px;
+	text-align: center;
+	list-style-type: none;
+
+}
+li a {
+		float:left;
+	display: realtive;
+	text-decoration: none;
+}
+li .active {
+	color: white;
+	
+	background-color: black;
+}
+li a:hover:not(.active){
+	background-color: gray;
+	text-decoration: none;
+	display: block;
+	color: white;
+}
+
+
+

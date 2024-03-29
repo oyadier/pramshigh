@@ -1,22 +1,60 @@
 <!DOCTYPE>
 <html>
 <head>
-<style >
-    div  p{
-        color: red;
-    }
-    div + p{
-        color: yellow;
-    } 
-   </style>
+<link rel="stylesheet" href="style\navigation.css">
+<link rel="stylesheet" href="style\elements.css">
+<link rel="stylesheet" href="style\by_class.css">
+<link rel="stylesheet" href="style\footer.css">
+<link rel="stylesheet" href="style\header.css">
+<link rel="stylesheet" href="style\dropdown.css">
 </head>
+<div style="background-image: url(asset\images\logo.jpg);">
 <header>
+<a href="index.html"><img src="asset\images\logo.jpg" alt="School Logo" style="float:left; width:50px;height:50px"></a>
+<p style="text-align:center; float: left; margin-left: 30px;">Prampram Senior High, <strong title="Percevierance">Nyegblah!!</strong></p>
+<ul class="nav1">
+<div class="dropdown">
+
+	<li ><a class="active" href="index.html">Home</a></li>
+<div class="dropdown-content">
+<ul class="nav1">
+	<li ><a class="active" href="index.html">Home</a></li>
+	<li><a href="courses.html">Courses</a></li>
+	<li><a href="f1_va_timetable.html">Timetable</a></li>
+	<li><a href="fisher.html">Fisher</a></li>
+	<li style="float: right;"><a href="navigation.html">Navigation</a></li>
+</ul>
+</div>
+</div>
+	<li><a href="courses.html">Courses</a></li>
+	<li><a href="f1_va_timetable.html">Timetable</a></li>
+	<li><a href="fisher.html">Fisher</a></li>
+<div class="dropdown">
+
+<li style="float: right;"><a href="navigation.html">Navigation</a></li>
+<div class="dropdown-content">
+<ul class="nav1">
+	<li ><a class="active" href="index.html">Home</a></li>
+	<li><a href="courses.html">Courses</a></li>
+	<li><a href="f1_va_timetable.html">Timetable</a></li>
+	<li><a href="fisher.html">Fisher</a></li>
+	<li style="float: right;"><a href="navigation.html">Navigation</a></li>
+</ul>
+</div>
+</div>
+
+	<li style="float: right;"><a href="navigation.html">Navigation</a></li>
+	
+</ul>
 
 </header>
+<div style="padding:0px; margin-top: 90px; height: 1300px;">
 <body>
-    <div>
-        <p>This is a paragraph.</p>
-        <p>This is a paragraph.</p>
+    <div class="dropdown">
+	<span> Point on me</span>
+	<div class="dropdown-content">
+		<p> Student</p>
+		</div>
       </div>
       <p>This is a paragraph.</p>
       <p>This is a paragraph.</p>
@@ -25,4 +63,5 @@
 
     </footer>
 </body>
+</div>
 </html>

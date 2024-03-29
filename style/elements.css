@@ -44,3 +44,7 @@ link {
 	font-style: bold;
 
 }
+
+p::before {
+	content: Hello!!
+}
