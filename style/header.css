@@ -15,5 +15,7 @@ header img {
 
 header:hover {
 	background-color: green;
-	color: white;
+}
+header:hover p {
+	
 }

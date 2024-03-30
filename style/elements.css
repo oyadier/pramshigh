@@ -44,3 +44,11 @@ link {
 	font-style: bold;
 
 }
+
+/*Pseudo element example*/
+
+p::first-letter {
+	font-size: 40px;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	color: brown;
+}
