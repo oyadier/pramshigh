@@ -1,17 +1,15 @@
 ul.nav1 {
 	float:right;
-	font-size: 20px;
 	color:black;
 }
 .nav1 li{
 	display: inline-block;
-	margin: 0px;
-	padding: 4px;
+	margin: 5px;
 	list-style-type: none;
 
 }
 li a {
-	min-width: 150px;
+	min-width: 100px;
 	text-decoration: none;
 }
 li .active {

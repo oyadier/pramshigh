@@ -34,15 +34,19 @@ input[type=button] {
 input[type=button]:hover {
 	background-color: #248f24;
 }
-div {
+div.forms {
+	margin-top: 10%;
+	margin-left: 40%;
+	margin-right: 50%;
 	background-color:lightgray;
 	border-radius:5px;
 	padding:40px;
-	width: 50%;
-	margin:auto;
+	width: 20%;
+	
+	box-shadow: 0 6px 4px rgba(0, 0, 0, 0.1);
 	border: 2px solid green;
 }
-h2 {
+ #form_lable {
 	text-align: center;
 	color: deepgreen;
 	margin-top: 5%;

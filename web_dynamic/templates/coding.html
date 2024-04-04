@@ -1,9 +1,14 @@
 
+<head>
+	<link rel="stylesheet"  type="text/css" href="{{ url_for ('static', filename='style/form.css')}}">
+</head>
 {% extends 'base.html' %}
 {% block content %}
 <main>
-	<h2> Login </h2>
-<div>
+	
+<div class="forms">
+	<h2 id="form_lable"> Login </h2>
+	<hr>
 <form>
 <label for="fname">First Name</label>
 <input type="text" id="lname" name="first_name">

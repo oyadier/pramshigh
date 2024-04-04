@@ -10,28 +10,30 @@
     <link rel="stylesheet"  type="text/css" href="{{ url_for ('static', filename='style/dropdown.css')}}">
     <link rel="stylesheet"  type="text/css" href="{{ url_for ('static', filename='style/links.css')}}">
     <link rel="stylesheet"  type="text/css" href="{{ url_for ('static', filename='style/table.css')}}">
-</head>
-<div>
-<header>
-<a href="index.html"><img src="../static/asset\images\logo.jpg" alt="School Logo" style="float:left; width:50px;height:50px"></a>
-<p style="text-align:center; float: left; margin-left: 30px;">Prampram Senior High, <strong title="Percevierance">Nyegblah!!</strong></p>
-<ul class="nav1">
-<div class="dropdown">
+ </head>
+<div id="headers">
+ <header>
+ <a href="/pramshigh/"><img src="../static/asset/images/logo.jpg" alt="School Logo" style="float:left; width:50px;height:50px"></a>
+ <p style="text-align:center; float: left; margin-left: 30px;">Prampram Senior High, <strong title="Percevierance">Nyegblah!!</strong></p>
+ <ul class="nav1">
+ <div class="dropdown">
 
-	<li ><a class="active" href="index.html">Home</a></li>
-<div class="dropdown-content">
-<ul class="nav1">
-	<li ><a class="active" href="index.html">Home</a></li>
-	<li><a href="courses.html">Courses</a></li>
-	<li><a href="f1_va_timetable.html">Timetable</a></li>
-	<li><a href="fisher.html">Fisher</a></li>
-	<li ><a href="navigation.html">Navigation</a></li>
+	<li ><a class="active" href="{{ url_for('pramshigh')}}">Home</a></li>
+ <div class="dropdown-content">
+ <ul class="nav1">
+	<li ><a class="active" href="{{ url_for('pramshigh')}}">Home</a></li>
+	<li><a href="{{ url_for('courses')}}">Courses</a></li>
+	<li><a href="{{ url_for('timetable')}}">Timetable</a></li>
+	<li><a href="{{ url_for('fisher')}}">Fisher</a></li>
+	<li ><a href="{{ url_for('navigation')}}">Navigation</a></li>
+	
+
 </ul>
 </div>
 </div>
-	<li><a href="courses.html">Courses</a></li>
-	<li><a href="f1_va_timetable.html">Timetable</a></li>
-	<li><a href="fisher.html">Fisher</a></li>
+	<li><a href="{{ url_for('courses')}}">Courses</a></li>
+	<li><a href="{{ url_for('timetable')}}">Timetable</a></li>
+	<li><a href="{{ url_for('fisher')}}">Fisher</a></li>
 <div class="dropdown">
 
 <li><a href="navigation.html">Navigation</a></li>
@@ -44,12 +46,13 @@
 	<li><a href="navigation.html">Navigation</a></li>
 </ul>
 </div>
+<li ><a href="{{ url_for('form')}}">Form</a></li>
 </div>	
 </ul>
-
 </header>
-<div style="padding:0px; margin-top: 90px; height: 2300%;">
-<body>
+</div>
+
+<body style="padding-top: 5%;">
 	{% block content %} 
 	{% endblock %}
 
@@ -62,5 +65,4 @@
 <p>info@gradegenuis.tech
 </footer>
 </body>
-</div>
 </html>
