@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<title>PramsHigh - {{title}}</title>
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet"  type="text/css" href="{{ url_for ('static', filename='style/elements.css')}}">
     <link rel="stylesheet"  type="text/css" href="{{ url_for ('static', filename='style/navigation.css')}}">
     <link rel="stylesheet"  type="text/css" href="{{ url_for ('static', filename='style/footer.css')}}">
@@ -47,7 +49,9 @@
 
 </header>
 <div style="padding:0px; margin-top: 90px; height: 2300%;">
-<body> 
+<body>
+	{% block content %} 
+	{% endblock %}
 
 <footer>
 <h1> Contact Us</h1>

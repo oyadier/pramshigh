@@ -21,5 +21,9 @@ def courses():
 def base_url():
      return render_template('base.html')
 
+@app.route('/coding/')
+def forms():
+     return render_template('coding.html')
+
 if __name__ == "__main__":
     app.run(debug=True)
