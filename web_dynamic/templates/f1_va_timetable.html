@@ -1,21 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
+
 <title> Timetables</title>
-<meta charset="utf=8">
-<link rel="stylesheet" href="style\elements.css">
-<link rel="stylesheet" href="style\header.css">
-<link rel="stylesheet" href="style\footer.css">
-<link rel="stylesheet" href="style\table.css">
-<link rel="stylesheet" href="style\links.css">
-
-</head>
-<header>
-<a href="index.html"><img src="asset\images\logo.jpg" alt="School Logo" style="float:left; width:50px;height:50px;"></a>
-<p style="text-align:center;">Prampram Senior High, <strong title="Percevierance">Nyegblah!!</strong></p>
-
-</header>
-<body >
+{% extends 'base.html' %}
+{% block content %}
+<main>
 	<div style="overflow-x: auto;">
 <table>
 	
@@ -136,13 +123,5 @@
 <h3> Readmore</h3>
 </div>
 <p class="left_blue"> 4<sup>2 = 8</sup> Now what is the answer for this 34<sub>2 = ?</sub></p>
-<footer>
-<h1 style="text-align: center;"> Contact Us</h1>
-<address>
-<p>Gradegenuis Ltd<b>
-<p>Greater Accra, Ologotse street-Ningo<b>
-<p>P.O. BOX 345F<b>
-<p>info@gradegenuis.tech
-</footer>
-</body>
-</html>
+ </main>
+ {% endblock %}
