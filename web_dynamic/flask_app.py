@@ -1,4 +1,5 @@
 from flask import Flask, render_template
+
 import os
 app = Flask(__name__)
 
@@ -9,14 +10,16 @@ def pramshigh():
        return render_template('index.html')
     
 
-@app.route("/home/fisher/")
+@app.route("/pramshigh/fisher/")
 @app.route("/fisher/")
 def fisher():
       return render_template('fisher.html')
 
-@app.route("/courses/")
+@app.route("/pramshigh/courses/")
 def courses():
-     return render_template('courses.html')
+     courses= ['Business', 'Scince', 'Home Econs (1)', 'Christian Religious Service']
+     le = len(courses)
+     return render_template('courses.html', courses=courses, lens=le)
 
 @app.route("/navigation/")
 def navigation():
@@ -24,11 +27,12 @@ def navigation():
 
 @app.route('/timetable/')
 def timetable():
-     return render_template('f1_va_timetable.html')
+     return render_template('timetable_f1.html')
 
-@app.route('/form/')
+@app.route("/pramshigh/form/")
 def form():
+
      return render_template('form.html')
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)

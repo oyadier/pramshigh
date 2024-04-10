@@ -5,7 +5,7 @@
             The following are the subject of course offered at Prampram Senior High
         </h2>
         <h2>
-            Business
+            {{ subject }}
         </h2>
         <ul>
             <li>Managemnent in Living</li>
@@ -56,6 +56,14 @@
         <ol style="list-style-type: lower-greek;">
             <li>Dangme</li><li>Government</li><li>Social Studies</li><li>Core Maths</li><li>Core English Language</li><li>Core ICT</li><li>Christian Religious Service</li>
         </ol>
+
+        <p> The following are some of the courses you may like to consider for your ward</p>
+        {%for i in range(0, lens)%}
+         
+        <ul>
+            <ol>{{ i + 1}}. {{ courses[i] }}</ol>
+        </ul>
+        {%endfor%}
 
  </main>
  {% endblock %}

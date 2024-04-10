@@ -1,69 +1,68 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>PramsHigh - {{title}}</title>
-	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet"  type="text/css" href="{{ url_for ('static', filename='style/elements.css')}}">
-    <link rel="stylesheet"  type="text/css" href="{{ url_for ('static', filename='style/navigation.css')}}">
-    <link rel="stylesheet"  type="text/css" href="{{ url_for ('static', filename='style/footer.css')}}">
-    <link rel="stylesheet"  type="text/css" href="{{ url_for ('static', filename='style/header.css')}}">
-    <link rel="stylesheet"  type="text/css" href="{{ url_for ('static', filename='style/dropdown.css')}}">
-    <link rel="stylesheet"  type="text/css" href="{{ url_for ('static', filename='style/links.css')}}">
-    <link rel="stylesheet"  type="text/css" href="{{ url_for ('static', filename='style/table.css')}}">
- </head>
+
+<head>{% block head %} {% endblock %}
+	<title> {% block title %} {% endblock %}</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="{{ url_for ('static', filename='style/elements.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for ('static', filename='style/navigation.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for ('static', filename='style/footer.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for ('static', filename='style/header.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for ('static', filename='style/dropdown.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for ('static', filename='style/links.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for ('static', filename='style/table.css')}}">
+</head>
 <div id="headers">
- <header>
- <a href="/pramshigh/"><img src="../static/asset/images/logo.jpg" alt="School Logo" style="float:left; width:50px;height:50px"></a>
- <p style="text-align:center; float: left; margin-left: 30px;">Prampram Senior High, <strong title="Percevierance">Nyegblah!!</strong></p>
- <ul class="nav1">
- <div class="dropdown">
+	<header>
+		<a href="/pramshigh/"><img src="../static/asset/images/logo.jpg" alt="School Logo"
+				style="float:left; width:50px;height:50px"></a>
+		<p style="text-align:center; float: left; margin-left: 30px;">Prampram Senior High, <strong
+				title="Percevierance">Nyegblah!!</strong></p>
+		<ul class="nav1">
+			<div class="dropdown">
 
-	<li ><a class="active" href="{{ url_for('pramshigh')}}">Home</a></li>
- <div class="dropdown-content">
- <ul class="nav1">
-	<li ><a class="active" href="{{ url_for('pramshigh')}}">Home</a></li>
-	<li><a href="{{ url_for('courses')}}">Courses</a></li>
-	<li><a href="{{ url_for('timetable')}}">Timetable</a></li>
-	<li><a href="{{ url_for('fisher')}}">Fisher</a></li>
-	<li ><a href="{{ url_for('navigation')}}">Navigation</a></li>
-	
+				<li><a class="active" href="{{ url_for('pramshigh')}}">Home</a></li>
+				<div class="dropdown-content">
+					<ul class="nav1">
+						<li><a class="active" href="{{ url_for('pramshigh')}}">Academics</a></li>
+						<li><a href="{{ url_for('courses')}}">Sport</a></li>
+						<li><a href="{{ url_for('timetable')}}">Debate</a></li>
+					</ul>
+				</div>
+			</div>
+			<li><a href="{{ url_for('courses')}}">Courses</a></li>
+			<li><a href="{{ url_for('timetable')}}">Timetable</a></li>
+			<li><a href="{{ url_for('fisher')}}">Fisher</a></li>
+			<div class="dropdown">
 
-</ul>
-</div>
-</div>
-	<li><a href="{{ url_for('courses')}}">Courses</a></li>
-	<li><a href="{{ url_for('timetable')}}">Timetable</a></li>
-	<li><a href="{{ url_for('fisher')}}">Fisher</a></li>
-<div class="dropdown">
-
-<li><a href="navigation.html">Navigation</a></li>
-<div class="dropdown-content">
-<ul class="nav1">
-	<li ><a class="active" href="index.html">Home</a></li>
-	<li><a href="courses.html">Courses</a></li>
-	<li><a href="f1_va_timetable.html">Timetable</a></li>
-	<li><a href="fisher.html">Fisher</a></li>
-	<li><a href="navigation.html">Navigation</a></li>
-</ul>
-</div>
-</div>	
-<li ><a href="{{ url_for('form')}}">Form</a></li>
-
-</ul>
-</header>
+				<li><a href="navigation.html">Departments</a></li>
+				<div class="dropdown-content">
+					<ul class="nav1">
+						<li><a class="active" href="index.html">Math & Science</a></li>
+						<li><a href="courses.html">Home Economics</a></li>
+						<li><a href="f1_va_timetable.html">Languages</a></li>
+					</ul>
+				</div>
+			</div>
+		</ul>
+	</header>
 </div>
 
 <body style="padding-top: 5%;">
-	{% block content %} 
+	{% block content %}
 	{% endblock %}
+	<footer>
+		<h1> Contact Us</h1>
+		<address>
+			<p>Gradegenuis Ltd<b>
+					<p>Greater Accra, Ologotse street-Ningo<b>
+							<p>P.O. BOX <b>
+									<p>info@gradegenuis.tech
+	</footer>
 
-<footer>
-<h1> Contact Us</h1>
-<address>
-<p>Gradegenuis Ltd<b>
-<p>Greater Accra, Ologotse street-Ningo<b>
-<p>P.O. BOX 345F<b>
-<p>info@gradegenuis.tech
-</footer>
+	{% block script %}
+	{% endblock %}
 </body>
+
 </html>
