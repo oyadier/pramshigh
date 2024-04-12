@@ -3,29 +3,34 @@
 
 <main>
 	<h1><b>Welcome to PramsHigh</h1>
-		<button >Change Element</button>
-    <p style="text-decoration: line-through; text-decoration-color: red; display: inline;">Don't say Pramsec </p><p style=" display: inline;margin-left: 0px;">rather PramsHigh</p>
-<p title="Welcome">With gradegenuis, you don't just compute your grade but get encourage by other ananymous grades of a specific location too.
-<hr>
-</p> <p> We believe in you that you achieve you planned grade. Don't be afraid. Go ahead and compute your regardless ):</p>
-<div>
-<img src="../static/asset/images/uni_happy_students.jpg" alt="Happy Students" style="min-width: 100%; min-height:800px;">
-<a href="{{ url_for('fisher') }}">Link to Document</a>
+	<button id="al">Change Element</button>
+	<p style="text-decoration: line-through; text-decoration-color: red; display: inline;">Don't say Pramsec </p>
+	<p style=" display: inline;margin-left: 0px;">rather PramsHigh</p>
+	<p title="Welcome">With gradegenuis, you don't just compute your grade but get encourage by other ananymous grades
+		of a specific location too.
+		<hr>
+	</p>
+	<p> We believe in you that you achieve you planned grade. Don't be afraid. Go ahead and compute your regardless ):
+	</p>
+	<div>
+		<img src="../static/asset/images/uni_happy_students.jpg" alt="Happy Students"
+			style="min-width: 100%; min-height:800px;">
+		<a href="{{ url_for('views.fisher') }}">Link to Document</a>
 
-<p style="size: 30"> Access <a  href="/fisher/" target=_top>Fisher</a> now</p>
-</div>
-<pre>
+		<p style="size: 30"> Access <a href="/fisher/" target=_top>Fisher</a> now</p>
+	</div>
+	<pre>
 	Just		enter		your 		grade
 	
 
 	We 		are 		hear		for 		you.
 </pre>
-<a id="happy" href="image_uri.html" target=_blank>
-	<img src="../static/asset/images/happy_students.jpg" 
-	alt="Happy Students" style="min-width: 100%; min-height:800px;"></a>
+	<a id="happy" href="image_uri.html" target=_blank>
+		<img src="../static/asset/images/happy_students.jpg" alt="Happy Students"
+			style="min-width: 100%; min-height:800px;"></a>
 
 	{% block script %}
-<script type="text/javascript" src="{{ url_for ('static', filename='../scripts/login.js')}}" defer></script>
-{% endblock %}
+	<script type="text/javascript" src="{{ url_for ('static', filename='scripts/index.js')}}" defer></script>
+	{% endblock %}
 </main>
 {% endblock %}

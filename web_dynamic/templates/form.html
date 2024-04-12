@@ -16,19 +16,19 @@ Login
 	<div class="forms">
 		<h2 id="form_lable"> Login </h2>
 		<hr>
-		<form>
+		<form method="post">
 			<label for="fname">First Name</label>
 			<input type="text" id="first" name="first_name">
 			<label for="last_name">Last Name</label>
-			<input type="text" id="last" name="lastname">
+			<input type="text" id="last" name="last_name">
 			<label for="password">Password</label>
 			<input type="password" id="pwd" name="password">
-			<input type="button" id="send" value="Submit">
+			<input type="submit" id="send" value="Submit">
 		</form>
 	</div>
-	{%block script%}
+	{% block script %}
 	<script type="text/javascript" src="{{ url_for ('static', filename='scripts/login.js')}}" defer></script>
-	{%endblock%}
+	{% endblock %}
 </main>
 
 <p id="oya"> Hello!, </p>
@@ -36,6 +36,6 @@ Login
 	
 </ul>
 <button id="new_button" style="background-color: gray;padding: 10px; outline: 2px solid gray; display: inline;">New Button </button>
-<button id="new_button" style="background-color: gray;padding: 10px; outline: 2px solid yellow;">Compute </button>
+<button id="compute" style="background-color: gray;padding: 10px; outline: 2px solid yellow;">Compute </button>
 
 {% endblock %}

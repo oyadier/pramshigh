@@ -20,20 +20,20 @@
 		<p style="text-align:center; float: left; margin-left: 30px;">Prampram Senior High, <strong
 				title="Percevierance">Nyegblah!!</strong></p>
 		<ul class="nav1">
-			<div class="dropdown">
+<div class="dropdown">
 
-				<li><a class="active" href="{{ url_for('pramshigh')}}">Home</a></li>
+				<li><a class="active" href="{{ url_for('views.pramshigh')}}">Home</a></li>
 				<div class="dropdown-content">
 					<ul class="nav1">
-						<li><a class="active" href="{{ url_for('pramshigh')}}">Academics</a></li>
-						<li><a href="{{ url_for('courses')}}">Sport</a></li>
-						<li><a href="{{ url_for('timetable')}}">Debate</a></li>
+						<li><a class="active" href="{{ url_for('views.pramshigh')}}">Academics</a></li>
+						<li><a href="{{ url_for('views.courses')}}">Sport</a></li>
+						<li><a href="{{ url_for('views.timetable')}}">Debate</a></li>
 					</ul>
 				</div>
 			</div>
-			<li><a href="{{ url_for('courses')}}">Courses</a></li>
-			<li><a href="{{ url_for('timetable')}}">Timetable</a></li>
-			<li><a href="{{ url_for('fisher')}}">Fisher</a></li>
+			<li><a href="{{ url_for('views.courses')}}">Courses</a></li>
+			<li><a href="{{ url_for('views.timetable')}}">Timetable</a></li>
+			<li><a href="{{ url_for('views.fisher')}}">Fisher</a></li>
 			<div class="dropdown">
 
 				<li><a href="navigation.html">Departments</a></li>
@@ -52,13 +52,39 @@
 <body style="padding-top: 5%;">
 	{% block content %}
 	{% endblock %}
+
+	{% with messages = get_flashed_messages(with_categories=true) %}
+	{% if messages %}
+	{% for category, message in messages %}
+	{% if category == 'error' %}
+	<div class="alert alert-danger alert-dismissable fade show" role='alert'>
+		{{ message }}
+		<button type="button" class="close" data-dismiss="alert">
+			<span aria-hidden="true">&times;</span>
+		</button>
+	</div>
+	{% else %}
+	<div class="alert alert-success alert-dismissable fade show" role='alert'>
+		{{ message }}
+		<button type="button" class="close" data-dismiss="alert">
+			<span aria-hidden="true">&times;</span>
+		</button>
+	</div>
+
+	{% endif %}
+	{% endfor %}
+	{% endif %}
+	{% endwith %}
 	<footer>
 		<h1> Contact Us</h1>
 		<address>
-			<p>Gradegenuis Ltd<b>
-					<p>Greater Accra, Ologotse street-Ningo<b>
-							<p>P.O. BOX <b>
-									<p>info@gradegenuis.tech
+			<p>Gradegenuis Ltd</p><b>
+					<p>Greater Accra, Ologotse street-Ningo</p><b>
+							<p>P.O. BOX </p><b>
+									<p>info@gradegenuis.tech</p>
+										
+		
+								</address>
 	</footer>
 
 	{% block script %}
