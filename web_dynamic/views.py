@@ -8,7 +8,7 @@ from web_dynamic.database import session
 from werkzeug.security import generate_password_hash, check_password_hash
 views = Blueprint('views', __name__)
 
-
+store = FileStorage()
 @views.route("/home/")
 @views.route('/coding/index/')
 def pramshigh():
@@ -19,7 +19,18 @@ def pramshigh():
 # @views.teardown_app_request
 # def shutdown_session(exception=None):
 #     session.remove()
-    
+@views.route('/delete_user', methods=['GET','POST'])
+def delete_user():
+     
+     if request.method=='POST':
+          
+          data = request.get_json()
+          inputValue = data['value']
+          print(inputValue)
+          store.deletes(inputValue)
+           
+     return render_template('form.html')
+
 @views.route("/home/fisher/")
 @views.route("/fisher/")
 def fisher():
@@ -41,10 +52,8 @@ def timetable():
 
 
 
-@views.route("/home/form/", methods=['GET','POST'])
+@views.route("/form", methods=['GET','POST'])
 def form():
-     
-     
      #If the request is a POST. THIS is checked because
      
      # this same method will perform GET request too
@@ -56,8 +65,7 @@ def form():
           pwd = data.get('password')
           new_obj = User(fName,sName,pwd)
      
-          fl = FileStorage()
-          new = fl.save(new_obj)
+          new = store.save(new_obj)
              
        #   return redirect(url_for('views.pramshigh'))
 

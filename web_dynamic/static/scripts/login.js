@@ -52,3 +52,31 @@ function sumOfInputs(numbers) {
 
     console.log("Final result: " + " : " + numbers)
 }
+
+
+const btn_del = document.getElementById('delete')
+btn_del.addEventListener('click', sendValue);
+
+function sendValue() {
+  
+    const inputValue = document.getElementById('by_id').value;  
+    fetch('/pramshigh/delete_user', {
+        method: 'POST',
+        cache: 'no-cache',
+        headers: {
+            "Content-Type": 'application/json'
+        },
+        body: JSON.stringify({ value: inputValue })
+        
+    })
+    .then(response => {
+        if (!response.ok){
+            throw new Error("Poor network");
+        }
+        alert("Data sent successfully");
+    })
+    .catch(error =>{
+       
+    });
+
+}
